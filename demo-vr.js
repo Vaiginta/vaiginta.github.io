@@ -18,6 +18,7 @@ class DemoVR extends Demo {
         this._presentChanged = this._presentChanged.bind(this);
         this._frameData = new VRFrameData();
         window.addEventListener('vrdisplaypresentchange', this._presentChanged);
+        this._activateVR();
       }
 
       _updateCamera(viewMatrix, projectionMatrix) {
