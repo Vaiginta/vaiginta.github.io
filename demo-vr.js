@@ -1,5 +1,6 @@
 class DemoVR extends Demo {
     constructor() {
+      console.log('vr');
         super(); 
         this._getDisplay = this._getDisplay.bind(this);
     
