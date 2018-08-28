@@ -50,12 +50,13 @@ class DemoVR extends Demo {
       }
 
       _activateVR() {
-        if (this._display && !this._display.isPresenting) {
-          console.log('activate');
+        // alert('activate function',)
+        // if (this._display && !this._display.isPresenting) {
+          // alert('activate');
           this._display.requestPresent([{
             source: this._renderer.domElement
           }]);
-        }
+        // }
       }
 
       _deactivateVR() {
