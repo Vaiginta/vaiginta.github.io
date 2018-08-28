@@ -11,7 +11,6 @@ class DemoVR extends Demo {
         this._display = null;
     
         this._getDisplay(); 
-        // this._activateVR();
         this._togglePresent = this._togglePresent.bind(this);
         this._button = document.getElementById('vr-button');
         this._button.addEventListener('click', this._togglePresent);
@@ -96,7 +95,6 @@ class DemoVR extends Demo {
       }
 
       _render() {
-            this._activateVR();
         // If we aren't presenting to a display then do the non-VR render
         if (!this._display || !this._display.isPresenting) {
           return super._render();
