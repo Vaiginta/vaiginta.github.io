@@ -23,7 +23,6 @@ class Demo {
   }
 
   constructor () {
-    console.log('demo');
     this._width;
     this._height;
     this._renderer;
@@ -32,7 +31,7 @@ class Demo {
     this._settings;
     this._box;
     this._container = document.querySelector('#container');
-    this._rotation = Math.PI;
+    this._rotation = Math.PI * 0.2;
     this._translation = 0;
     this._currentHeadPosition = '';
     this._offsetX = 0;

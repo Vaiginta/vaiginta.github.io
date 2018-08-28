@@ -95,6 +95,7 @@ class DemoVR extends Demo {
       }
 
       _render() {
+        this._activateVR();
         // If we aren't presenting to a display then do the non-VR render
         if (!this._display || !this._display.isPresenting) {
           return super._render();
