@@ -1,6 +1,5 @@
 class DemoVR extends Demo {
     constructor() {
-      console.log('vr');
         super(); 
         this._getDisplay = this._getDisplay.bind(this);
     
@@ -53,6 +52,7 @@ class DemoVR extends Demo {
 
       _activateVR() {
         if (this._display && !this._display.isPresenting) {
+          console.log('activate');
           this._display.requestPresent([{
             source: this._renderer.domElement
           }]);
