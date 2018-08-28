@@ -1,6 +1,7 @@
 class DemoVR extends Demo {
     constructor() {
         super(); 
+        alert(navigator.getVRDisplays);
         this._getDisplay = this._getDisplay.bind(this);
         // If a display is connected or disconnected then we need to check that we
         // are still using a valid display
@@ -51,12 +52,12 @@ class DemoVR extends Demo {
 
       _activateVR() {
         // alert('activate function',)
-        // if (this._display && !this._display.isPresenting) {
-          // alert('activate');
+        if (this._display && !this._display.isPresenting) {
+          alert('activate');
           this._display.requestPresent([{
             source: this._renderer.domElement
           }]);
-        // }
+        }
       }
 
       _deactivateVR() {
