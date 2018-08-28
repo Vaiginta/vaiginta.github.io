@@ -23,6 +23,7 @@ class Demo {
   }
 
   constructor () {
+    console.log('demo');
     this._width;
     this._height;
     this._renderer;
