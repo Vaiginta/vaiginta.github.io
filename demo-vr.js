@@ -2,7 +2,6 @@ class DemoVR extends Demo {
     constructor() {
         super(); 
         this._getDisplay = this._getDisplay.bind(this);
-        alert('vr');
         // If a display is connected or disconnected then we need to check that we
         // are still using a valid display
         window.addEventListener('vrdisplayconnect', this._getDisplay);
