@@ -138,28 +138,28 @@ class Demo {
 
   createTexture() {
     var self = this;
-      var texture = new THREE.TextureLoader().load('me.jpg');
+      var texture = new THREE.TextureLoader().load('shark.png');
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
       texture.center.set(0.5, 0.5);
       // texture.offset.set(1.5, 1.5);
       texture.repeat.set(0.25, -0.25);
       texture.rotation = - this._rotation;
-      var flippedTexture = new THREE.TextureLoader().load('me.jpg');
+      var flippedTexture = new THREE.TextureLoader().load('shark.png');
       flippedTexture.wrapS = THREE.RepeatWrapping;
       flippedTexture.wrapT = THREE.RepeatWrapping;
       flippedTexture.center.set(0.5, 0.5);
       // flippedTexture.offset.set(1.5, 1.5);
       flippedTexture.repeat.set(-0.25, -0.25);
       flippedTexture.rotation =  this._rotation;
-      var texture2 = new THREE.TextureLoader().load('me.jpg');
+      var texture2 = new THREE.TextureLoader().load('shark.png');
       texture2.wrapS = THREE.RepeatWrapping;
       texture2.wrapT = THREE.RepeatWrapping;
       texture2.center.set(0.5, 0.5);
       // texture2.offset.set(1.5, 1.5);
       texture2.repeat.set(0.25, 0.25);
       texture2.rotation =  this._rotation;
-      var flippedTexture2 = new THREE.TextureLoader().load('me.jpg');
+      var flippedTexture2 = new THREE.TextureLoader().load('shark.png');
       flippedTexture2.wrapS = THREE.RepeatWrapping;
       flippedTexture2.wrapT = THREE.RepeatWrapping;
       flippedTexture2.center.set(0.5, 0.5);
