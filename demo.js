@@ -68,13 +68,13 @@ class Demo {
 
   _shouldUpdate(headPosition) {
     if (headPosition) {
-      if(headPosition.map(hp => hp.toFixed(1)).toString() 
-      !== this._currentHeadPosition.map(hp => hp.toFixed(1)).toString()) {
+      if(headPosition.map(hp => Math.round(hp)).toString() 
+      !== this._currentHeadPosition.map(hp => Math.round(hp)).toString()) {
         this._rotation = Math.random() * 2 * Math.PI;
         this._translation = Math.random() * 2;
         this.updateTextures();
       }
-      this._currentHeadPosition = headPosition.map(hp => hp.toFixed(1));
+      this._currentHeadPosition = headPosition.map(hp => Math.round(hp));
     }
   }
 
