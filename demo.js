@@ -33,7 +33,7 @@ class Demo {
     this._container = document.querySelector('#container');
     this._rotation = Math.PI * 0.2;
     this._translation = 0;
-    this._currentHeadPosition = '';
+    this._currentHeadPosition = [];
     this._offsetX = 0;
     this._offsetY = 0;
     this._centerX = 0.5;
@@ -68,12 +68,13 @@ class Demo {
 
   _shouldUpdate(headPosition) {
     if (headPosition) {
-      if(headPosition.toString() !== this._currentHeadPosition) {
+      if(headPosition.map(hp => hp.toFixed(1)).toString() 
+      !== this._currentHeadPosition.map(hp => hp.toFixed(1)).toString()) {
         this._rotation = Math.random() * 2 * Math.PI;
         this._translation = Math.random() * 2;
         this.updateTextures();
       }
-      this._currentHeadPosition = headPosition.toString();
+      this._currentHeadPosition = headPosition.map(hp => hp.toFixed(1));
     }
   }
 
@@ -138,21 +139,21 @@ class Demo {
 
   createTexture() {
     var self = this;
-      var texture = new THREE.TextureLoader().load('city.png');
+      var texture = new THREE.TextureLoader().load('shark.png');
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.RepeatWrapping;
       texture.center.set(0.5, 0.5);
       // texture.offset.set(1.5, 1.5);
       texture.repeat.set(0.25, -0.25);
       texture.rotation = - this._rotation;
-      var flippedTexture = new THREE.TextureLoader().load('city.png');
+      var flippedTexture = new THREE.TextureLoader().load('shark.png');
       flippedTexture.wrapS = THREE.RepeatWrapping;
       flippedTexture.wrapT = THREE.RepeatWrapping;
       flippedTexture.center.set(0.5, 0.5);
       // flippedTexture.offset.set(1.5, 1.5);
       flippedTexture.repeat.set(-0.25, -0.25);
       flippedTexture.rotation =  this._rotation;
-      var texture2 = new THREE.TextureLoader().load('city.png');
+      var texture2 = new THREE.TextureLoader().load('shark.png');
       texture2.wrapS = THREE.RepeatWrapping;
       texture2.wrapT = THREE.RepeatWrapping;
       texture2.center.set(0.5, 0.5);
