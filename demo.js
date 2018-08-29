@@ -160,7 +160,7 @@ class Demo {
       // texture2.offset.set(1.5, 1.5);
       texture2.repeat.set(0.25, 0.25);
       texture2.rotation =  this._rotation;
-      var flippedTexture2 = new THREE.TextureLoader().load('city.png');
+      var flippedTexture2 = new THREE.TextureLoader().load('shark.png');
       flippedTexture2.wrapS = THREE.RepeatWrapping;
       flippedTexture2.wrapT = THREE.RepeatWrapping;
       flippedTexture2.center.set(0.5, 0.5);
